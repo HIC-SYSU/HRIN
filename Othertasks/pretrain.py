@@ -11,7 +11,7 @@ import h5py
 
 
 from torch.utils.data import DataLoader
-from comon.evaluation import DiceLoss
+from evaluation import DiceLoss
 from Data.dataset.othertasks import TaskDataset
 
 loss_fun = DiceLoss()
