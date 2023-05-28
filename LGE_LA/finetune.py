@@ -6,7 +6,7 @@ import numpy as np
 from tqdm import tqdm
 import os
 from model.model_finetune import Segmentation as Net2
-from comon.evaluation import DiceLoss, save_h5
+from evaluation import DiceLoss, save_h5
 import time
 from torch.utils.data import DataLoader
 from Data.dataset.LGE_LA import LADataSetFineTune
