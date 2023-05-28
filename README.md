@@ -16,4 +16,4 @@ https://zmiclab.github.io/zxh/0/mmwhs/
 - cuda 11.1
 
 ## Trained model
-Download the trained model from https://drive.google.com/drive/folders/1gTPxNwB02fEFGOyjQh3zGmfKODIBt1jo?usp=drive_link
+Download the trained model from Google Drive: https://drive.google.com/drive/folders/1gTPxNwB02fEFGOyjQh3zGmfKODIBt1jo?usp=drive_link
