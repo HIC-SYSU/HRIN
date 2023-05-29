@@ -5,6 +5,10 @@
 </p>
 
 ## Prepare Datasets
+2018 Atria Segmentation Challenge Data
+```
+https://www.cardiacatlas.org/atriaseg2018-challenge/atria-seg-data/
+```
 The Multi-modality Whole Heart Segmentation (MM-WHS) 2017 dataset
 ```
 https://zmiclab.github.io/zxh/0/mmwhs/
