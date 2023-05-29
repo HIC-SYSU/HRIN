@@ -5,6 +5,11 @@
 </p>
 
 ## Prepare Datasets
+CHAOS - Combined (CT-MR) Healthy Abdominal Organ Segmentation
+```
+https://chaos.grand-challenge.org/Download/
+```
+
 2018 Atria Segmentation Challenge Data
 ```
 https://www.cardiacatlas.org/atriaseg2018-challenge/atria-seg-data/
