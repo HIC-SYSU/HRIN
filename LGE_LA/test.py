@@ -32,6 +32,11 @@ def main(path_data, path_model, lr_train, epochs, center, rate, num_class):  # I
     model_fine = model_fine.cuda()
     optimizer = torch.optim.Adam(model_fine.parameters(), lr=lr_train)
     schedulerD = torch.optim.lr_scheduler.StepLR(optimizer, step_size=train_dataset.num_batch, gamma=0.99, last_epoch=-1)
+    
+    global w1
+    global w2
+    w1 = Variable(torch.ones(1), requires_grad=True).cuda()
+    w2 = Variable(torch.ones(1), requires_grad=True).cuda()
 
     for epoch in range(epochs):
         print('---', str(epoch), '---')
@@ -63,7 +68,7 @@ def main(path_data, path_model, lr_train, epochs, center, rate, num_class):  # I
                 loss_query = (loss_query_bg + loss_query_label1) / 2
                 loss =  0.5*loss_sup + 0.5*loss_query
             else:
-                loss = 0.5*loss_sup_label1 + 0.5*loss_query_label1
+                loss = w1*loss_sup_label1 + w2*loss_query_label1
 
 
             if rate == 0.6:
