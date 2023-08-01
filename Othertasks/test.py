@@ -68,7 +68,7 @@ def main(path_data, path_model, file_name, task, lr_train, epochs, num_class):  
                 loss_query = (loss_query_bg + loss_query_label1) / 2
                 loss =  0.5*loss_sup + 0.5*loss_query
             else:
-                loss = w1*loss_sup_label1 + w2*loss_query_label1
+                loss = 1.0 / (2 * w1 * w1)*loss_sup_label1 + 1.0 / (2 * w2 * w2)*loss_query_label1 + torch.log(w1 * w1) + torch.log(w2 * w2)
 
             loss.backward()
             optimizer.step()
